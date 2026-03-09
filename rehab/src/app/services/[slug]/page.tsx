@@ -18,7 +18,11 @@ export default async function ServicePage({
   return (
     <main className="w-full">
   {/* 70-30 Article + CTA Layout */}
-      <ServiceLayout sections={service.sections} />
+      <ServiceLayout
+  title={service.title}
+  subtitle={service.subtitle}
+  sections={service.sections}
+/>
 
     </main>
   )
