@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import gsap from "gsap";
@@ -13,7 +14,13 @@ const images = [
   "/services/3.png",
   "/services/4.png",
   "/services/5.png",
-  
+];
+
+/* Service page routes */
+const serviceLinks = [
+  "/services/lymphatic-drainage",
+  "/services/sports-rehabilitation",
+  "/services/stroke-rehabilitation",
 ];
 
 export default function ServicesSection() {
@@ -27,10 +34,11 @@ export default function ServicesSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [showCursor, setShowCursor] = useState(false);
 
-  /* Cursor */
+  /* Cursor animation */
   useEffect(() => {
     const moveCursor = (e: MouseEvent) => {
       if (!cursorRef.current) return;
+
       gsap.to(cursorRef.current, {
         x: e.clientX - 32,
         y: e.clientY - 32,
@@ -43,7 +51,7 @@ export default function ServicesSection() {
     return () => window.removeEventListener("mousemove", moveCursor);
   }, []);
 
-  /* Scroll animation */
+  /* Scroll reveal */
   useEffect(() => {
     if (!sectionRef.current) return;
 
@@ -56,10 +64,6 @@ export default function ServicesSection() {
         duration: 1.2,
         ease: "power3.out",
         stagger: 0.15,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 75%",
-        },
       }
     );
   }, []);
@@ -69,7 +73,7 @@ export default function ServicesSection() {
       ref={sectionRef}
       className="relative w-full py-14 bg-[#0e1110] overflow-hidden"
     >
-      {/* Cursor */}
+      {/* Custom Cursor */}
       <div
         ref={cursorRef}
         className={`fixed top-0 left-0 z-[9999] pointer-events-none transition-opacity duration-300 ${
@@ -81,12 +85,10 @@ export default function ServicesSection() {
         </div>
       </div>
 
-      {/* Content */}
+      {/* Header */}
       <div className="w-full px-[max(5vw,40px)] mb-16 reveal">
-
         <div className="max-w-6xl mx-auto pl-[max(5vw,40px)] grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-[auto_auto] gap-x-14 gap-y-2">
 
-          {/* Row 1 */}
           <div>
             <h6 className="text-sm md:text-base tracking-[0.35em] uppercase text-neutral-400">
               What we offer
@@ -96,7 +98,6 @@ export default function ServicesSection() {
           <div></div>
           <div></div>
 
-          {/* Row 2 */}
           <div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl text-white leading-[1.05]">
               Our services
@@ -127,27 +128,55 @@ export default function ServicesSection() {
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex gap-8 px-[max(5vw,40px)] cursor-none select-none">
 
-            {images.map((src, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.6 }}
-                className="relative min-w-[90%] sm:min-w-[48%] lg:min-w-[32%] aspect-[3/4] overflow-hidden rounded-xl bg-black"
-              >
-                <Image
-                  src={src}
-                  alt={`service-${i}`}
-                  fill
-                  priority={i === 0}
-                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 48vw, 32vw"
-                  className="object-cover"
-                />
+            {images.map((src, i) => {
 
-                <div className="absolute inset-0 bg-black/0 hover:bg-black/35 transition-all duration-700" />
+              const slideWidth =
+                "min-w-[90%] sm:min-w-[48%] lg:min-w-[32%]";
 
-                <div className="absolute inset-0 shadow-[inset_0_0_120px_rgba(0,0,0,0.6)] opacity-0 hover:opacity-100 transition-opacity duration-700" />
-              </motion.div>
-            ))}
+              const card = (
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.6 }}
+                  className="relative w-full aspect-[3/4] overflow-hidden rounded-xl bg-black"
+                >
+                  <Image
+                    src={src}
+                    alt={`service-${i}`}
+                    fill
+                    priority={i === 0}
+                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 48vw, 32vw"
+                    className="object-cover"
+                  />
+
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-black/0 hover:bg-black/35 transition-all duration-700" />
+
+                  {/* Inner shadow */}
+                  <div className="absolute inset-0 shadow-[inset_0_0_120px_rgba(0,0,0,0.6)] opacity-0 hover:opacity-100 transition-opacity duration-700" />
+                </motion.div>
+              );
+
+              /* Clickable cards */
+              if (i < serviceLinks.length) {
+                return (
+                  <Link
+                    key={i}
+                    href={serviceLinks[i]}
+                    className={`${slideWidth} block cursor-pointer`}
+                  >
+                    {card}
+                  </Link>
+                );
+              }
+
+              /* Normal cards */
+              return (
+                <div key={i} className={slideWidth}>
+                  {card}
+                </div>
+              );
+
+            })}
 
           </div>
         </div>
