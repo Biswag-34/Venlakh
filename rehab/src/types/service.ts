@@ -6,10 +6,12 @@ export interface ServiceSection {
   points?: string[]
   video?: string
 }
+
 export interface ServiceData {
   slug: string
   title: string
   subtitle: string
   heroImage: string
+  cardImage?: string
   sections: ServiceSection[]
 }

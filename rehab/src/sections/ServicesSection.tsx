@@ -7,23 +7,11 @@ import { ArrowRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import gsap from "gsap";
 import { motion } from "framer-motion";
-
-const images = [
-  "/services/123.png",
-  "/services/2.png",
-  "/services/3.png",
-  "/services/4.png",
-  "/services/5.png",
-];
-
-/* Service page routes */
-const serviceLinks = [
-  "/services/lymphatic-drainage",
-  "/services/sports-rehabilitation",
-  "/services/stroke-rehabilitation",
-];
+import { getAllServices } from "@/lib/getService";
 
 export default function ServicesSection() {
+  const services = getAllServices();
+
   const [emblaRef] = useEmblaCarousel({
     loop: false,
     dragFree: true,
@@ -104,9 +92,9 @@ export default function ServicesSection() {
             </h2>
           </div>
 
-          <div className="text-neutral-300 text-base leading-relaxed font-body max-w-sm">
-            Sed ut perspiciatis unde omnis iste natus ut perspiciatis unde
-            omnis iste perspiciatis ut perspiciatis unde omnis iste natus.
+          <div className="text-neutral-300 text-base leading-relaxed max-w-sm">
+            Professional home healthcare services designed to support recovery,
+            rehabilitation, and long-term patient care.
           </div>
 
           <div className="flex items-end h-full">
@@ -128,52 +116,39 @@ export default function ServicesSection() {
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex gap-8 px-[max(5vw,40px)] cursor-none select-none">
 
-            {images.map((src, i) => {
+            {services.map((service, i) => {
 
               const slideWidth =
                 "min-w-[90%] sm:min-w-[48%] lg:min-w-[32%]";
 
-              const card = (
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.6 }}
-                  className="relative w-full aspect-[3/4] overflow-hidden rounded-xl bg-black"
-                >
-                  <Image
-                    src={src}
-                    alt={`service-${i}`}
-                    fill
-                    priority={i === 0}
-                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 48vw, 32vw"
-                    className="object-cover"
-                  />
-
-                  {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-black/0 hover:bg-black/35 transition-all duration-700" />
-
-                  {/* Inner shadow */}
-                  <div className="absolute inset-0 shadow-[inset_0_0_120px_rgba(0,0,0,0.6)] opacity-0 hover:opacity-100 transition-opacity duration-700" />
-                </motion.div>
-              );
-
-              /* Clickable cards */
-              if (i < serviceLinks.length) {
-                return (
-                  <Link
-                    key={i}
-                    href={serviceLinks[i]}
-                    className={`${slideWidth} block cursor-pointer`}
-                  >
-                    {card}
-                  </Link>
-                );
-              }
-
-              /* Normal cards */
               return (
-                <div key={i} className={slideWidth}>
-                  {card}
-                </div>
+                <Link
+                  key={service.slug}
+                  href={`/services/${service.slug}`}
+                  className={`${slideWidth} block cursor-pointer`}
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.6 }}
+                    className="relative w-full aspect-[3/4] overflow-hidden rounded-xl bg-black"
+                  >
+
+                    <Image
+                      src={service.cardImage || `/services/${i + 1}.png`}
+                      alt={service.title}
+                      fill
+                      sizes="(max-width: 640px) 90vw, (max-width: 1024px) 48vw, 32vw"
+                      className="object-cover"
+                    />
+
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 bg-black/0 hover:bg-black/35 transition-all duration-700" />
+
+                    {/* Inner shadow */}
+                    <div className="absolute inset-0 shadow-[inset_0_0_120px_rgba(0,0,0,0.6)] opacity-0 hover:opacity-100 transition-opacity duration-700" />
+
+                  </motion.div>
+                </Link>
               );
 
             })}
