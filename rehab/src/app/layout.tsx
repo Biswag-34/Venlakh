@@ -21,7 +21,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Rehabilitation Center",
+  title: "Venlakh",
   description: "Modern Rehabilitation Platform",
 };
 

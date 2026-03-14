@@ -4,58 +4,7 @@ import { motion, useInView, useAnimationControls } from "framer-motion"
 import Image from "next/image"
 import { useRef, useEffect } from "react"
 
-// ThemeREX easing curve
 const easeExpo: [number, number, number, number] = [0.19, 1, 0.22, 1]
-
-// Character animation
-function WaveText({
-  text,
-  className = "",
-  delay = 0,
-}: {
-  text: string
-  className?: string
-  delay?: number
-}) {
-  return (
-    <motion.span
-      initial="hidden"
-      animate="visible"
-      variants={{
-        hidden: {},
-        visible: {
-          transition: {
-            staggerChildren: 0.035,
-            delayChildren: delay,
-          },
-        },
-      }}
-      className={`inline-block ${className}`}
-    >
-      {text.split("").map((char, i) => (
-        <span key={i} className="inline-block overflow-hidden align-bottom">
-          <motion.span
-            variants={{
-              hidden: { y: "100%", opacity: 0 },
-              visible: {
-                y: 0,
-                opacity: 1,
-                transition: {
-                  duration: 2,
-                  ease: easeExpo,
-                },
-              },
-            }}
-            style={{ transformOrigin: "50% 100%" }}
-            className="inline-block"
-          >
-            {char === " " ? "\u00A0" : char}
-          </motion.span>
-        </span>
-      ))}
-    </motion.span>
-  )
-}
 
 export default function HeroSection() {
   const ref = useRef<HTMLDivElement>(null)
@@ -68,10 +17,8 @@ export default function HeroSection() {
   }, [isInView, controls])
 
   return (
-    <section
-      ref={ref}
-      className="relative h-screen w-full overflow-hidden"
-    >
+    <section ref={ref} className="relative h-screen w-full overflow-hidden">
+
       {/* Background */}
       <motion.div
         className="absolute inset-0"
@@ -84,39 +31,61 @@ export default function HeroSection() {
           ease: "easeInOut",
         }}
       >
+        {/* Desktop */}
         <div className="relative hidden xl:block h-full w-full">
-          <Image src="/hero/desktop.png" 
-          alt=""
-          fill
-          priority 
-          sizes="(min-width:1280px) 100vw"
-          className="object-cover" />
+          <Image
+            src="/hero/desktop.png"
+            alt=""
+            fill
+            priority
+            sizes="(min-width:1280px) 100vw"
+            className="object-cover"
+          />
         </div>
 
+        {/* Laptop */}
         <div className="relative hidden lg:block xl:hidden h-full w-full">
-          <Image src="/hero/laptop.png" alt="" fill priority 
-          sizes="(min-width:1024px) and (max-width:1279px) 100vw" 
-          className="object-cover" />
+          <Image
+            src="/hero/laptop.png"
+            alt=""
+            fill
+            priority
+            sizes="(min-width:1024px) and (max-width:1279px) 100vw"
+            className="object-cover"
+          />
         </div>
 
+        {/* Tablet */}
         <div className="relative hidden md:block lg:hidden h-full w-full">
-          <Image src="/hero/tablet.png" alt="" fill priority 
-          sizes="(min-width:768px) and (max-width:1023px) 100vw"
-           className="object-cover" />
+          <Image
+            src="/hero/tablet.png"
+            alt=""
+            fill
+            priority
+            sizes="(min-width:768px) and (max-width:1023px) 100vw"
+            className="object-cover"
+          />
         </div>
 
+        {/* Mobile */}
         <div className="relative block md:hidden h-full w-full">
-          <Image src="/hero/mobile.png" alt="" fill priority
-           sizes="(max-width:767px) 100vw"
-            className="object-cover" />
+          <Image
+            src="/hero/mobile.png"
+            alt=""
+            fill
+            priority
+            sizes="(max-width:767px) 100vw"
+            className="object-cover"
+          />
         </div>
       </motion.div>
 
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/45" />
 
       {/* Content */}
       <div className="relative z-10 flex h-full items-center">
-        <div className="container mx-auto px-6 lg:px-12 text-white">
+        <div className="container mx-auto px-6 lg:px-12">
 
           {/* Decorative Line */}
           <motion.div
@@ -133,36 +102,97 @@ export default function HeroSection() {
                 },
               },
             }}
-            className="h-[2px] bg-white mb-8"
+            
           />
 
-          {/* Small Heading */}
-          <div className="font-heading mb-14 leading-[1.25] tracking-[0.02em]">
-
-            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal">
-              <WaveText text="Trusted Rehabilitation" delay={0.1} />
-            </div>
-
-            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal">
-              <WaveText text="Center for Healing" delay={0.15} />
-            </div>
-
-          </div>
-
-          {/* Big Word */}
-          <div
+          {/* LOGO BLOCK */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={controls}
+            variants={{
+              hidden: { opacity: 0, y: 40 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 1.8,
+                  ease: easeExpo,
+                },
+              },
+            }}
             className="
-              font-heading
-              uppercase
-              font-medium
-              leading-[0.92]
-              tracking-[0.01em] lg:-tracking-[0.015em]
-              text-[42px] sm:text-[63px] md:text-[84px] lg:text-[119px] xl:text-[161px]
-              drop-shadow-[0_12px_30px_rgba(0,0,0,0.45)]
+            absolute
+
+            /* Mobile centered */
+            left-1/2 -translate-x-1/2
+            top-[42%]
+
+            flex flex-col items-center
+
+            /* Tablet */
+            md:left-10 md:translate-x-0 md:items-start md:top-[28%]
+
+            /* Laptop */
+            lg:left-14 lg:top-[24%]
+
+            /* Desktop */
+            xl:left-20 xl:top-[22%]
+
+            max-w-[85vw] md:max-w-[45vw]
             "
           >
-            <WaveText text="VENLAKH" delay={0.5} />
-          </div>
+
+            {/* LOGO ICON */}
+            <div
+              className="
+              w-[120px]
+
+              sm:w-[150px]
+
+              md:w-[140px]
+
+              lg:w-[170px]
+
+              xl:w-[210px]
+              "
+            >
+              <Image
+                src="/nlogo.png"
+                alt="Venlakh Logo"
+                width={500}
+                height={500}
+                priority
+                className="w-full h-auto"
+              />
+            </div>
+
+            {/* TEXT */}
+            <div
+              className="
+              w-[280px]
+
+              sm:w-[340px]
+
+              md:w-[360px]
+
+              lg:w-[420px]
+
+              xl:w-[520px]
+
+              -mt-1 md:-mt-2
+              "
+            >
+              <Image
+                src="/ntext.png"
+                alt="Venlakh Restocare Plus"
+                width={900}
+                height={300}
+                priority
+                className="w-full h-auto"
+              />
+            </div>
+
+          </motion.div>
 
         </div>
       </div>

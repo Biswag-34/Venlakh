@@ -11,6 +11,20 @@ import {
   MapPin,
 } from "lucide-react";
 
+
+/* ================= linking ================= */
+const services = [
+  { name: "Bedridden Support", href: "/services/bedridden-support" },
+  { name: "Cancer Recovery & Palliative Care Patients", href: "/services/cancer-recovery-palliative-care" },
+  { name: "Step Down Care", href: "/services/step-down-care" },
+  { name: "Advanced Wound Care and VAC", href: "/services/advanced-wound-care-vac" },
+  { name: "Post Surgical Management", href: "/services/post-surgical-management" },
+  { name: "Stroke and Neurotherapy", href: "/services/stroke-neurotherapy" },
+  { name: "Physiotherapy", href: "/services/physiotherapy" },
+  { name: "Home Care", href: "/services/home-care" },
+  { name: "End of Life Support", href: "/services/end-of-life-support" },
+];
+
 /* ================= Animation Variants ================= */
 
 const containerVariants = {
@@ -79,7 +93,7 @@ export default function Footer() {
             </h3>
 
             <ul className="space-y-2.5">
-              {["About Us", "Our Team", "Services", "Pricing", "Contact"].map(
+              {["About Us", "Pricing", "Contact"].map(
                 (item, i) => (
                   <li key={i}>
                     <Link
@@ -107,43 +121,37 @@ export default function Footer() {
 
           {/* ========== Column 3 ========== */}
           <motion.div
-            variants={itemVariants}
-            transition={{ duration: 0.9, ease: "easeOut" }}
-          >
-            <h3 className="text-sm uppercase tracking-wider mb-5 font-medium">
-              Our Services
-            </h3>
+  variants={itemVariants}
+  transition={{ duration: 0.9, ease: "easeOut" }}
+>
+  <h3 className="text-sm uppercase tracking-wider mb-5 font-medium">
+    Our Services
+  </h3>
 
-            <ul className="space-y-2.5">
-              {[
-                "Physical Therapy",
-                "Occupational Therapy",
-                "Speech Therapy",
-                "Pain Management",
-                "Neurological Rehab",
-              ].map((item, i) => (
-                <li key={i}>
-                  <Link
-                    href="#"
-                    className="
-                    relative inline-block text-sm text-gray-400
-                    transition-all duration-700
-                    hover:text-white hover:translate-x-1
+  <ul className="space-y-2.5">
+    {services.map((service, i) => (
+      <li key={i}>
+        <Link
+          href={service.href}
+          className="
+          relative inline-block text-sm text-gray-400
+          transition-all duration-700
+          hover:text-white hover:translate-x-1
 
-                    after:absolute after:left-0 after:-bottom-1
-                    after:h-[1px] after:w-full
-                    after:bg-white
-                    after:origin-left after:scale-x-0
-                    after:transition-transform after:duration-700
-                    hover:after:scale-x-100
-                    "
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
+          after:absolute after:left-0 after:-bottom-1
+          after:h-[1px] after:w-full
+          after:bg-white
+          after:origin-left after:scale-x-0
+          after:transition-transform after:duration-700
+          hover:after:scale-x-100
+          "
+        >
+          {service.name}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</motion.div>
 
           {/* ========== Column 4 ========== */}
           <motion.div
@@ -158,20 +166,20 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin size={17} strokeWidth={1.6} className="text-white mt-1" />
                 <p>
-                  27 Division St, New York,
+                  #123, 5th Main Road, Chamrajpet
                   <br />
-                  NY 10002, USA
+                  Bengaluru, Karnataka-560018
                 </p>
               </div>
 
               <div className="flex items-center gap-3">
                 <Phone size={17} strokeWidth={1.6} className="text-white" />
-                <p>+1 (800) 123 4567</p>
+                <p>+91 - 861 825 9484</p>
               </div>
 
               <div className="flex items-center gap-3">
                 <Mail size={17} strokeWidth={1.6} className="text-white" />
-                <p>info@example.com</p>
+                <p>info@thevenlakhhospital.com</p>
               </div>
             </div>
           </motion.div>

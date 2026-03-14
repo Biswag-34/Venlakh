@@ -2,281 +2,6 @@ import { ServiceData } from "@/types/service"
 
 export const services: ServiceData[] = [
 
-/* ------------------------------- */
-/* Post Surgical Management */
-/* ------------------------------- */
-
-{
-slug: "post-surgical-management",
-
-title: "Post Surgical Management",
-
-subtitle:
-"Professional post-operative care designed to ensure safe recovery, pain management, and prevention of complications after surgery.",
-
-heroImage:
-"https://images.unsplash.com/photo-1584515933487-779824d29309",
-
-cardImage:
-"/services/1.png",
-
-sections: [
-
-{
-image:
-"https://images.unsplash.com/photo-1584515933487-779824d29309"
-},
-
-{
-paragraph:
-"Post-surgical care plays a critical role in helping patients recover safely after an operation. Proper monitoring, wound management, medication support, and mobility assistance are essential to prevent infections, reduce complications, and accelerate healing."
-},
-
-{
-title: "Safe Recovery & Expert Monitoring",
-
-paragraph:
-"At Venlakh, our trained medical professionals provide structured post-operative care at home, ensuring patients receive proper wound care, medication supervision, and vital monitoring. Our goal is to support a smooth recovery while reducing the need for frequent hospital visits."
-},
-
-{
-imageRow: [
-"https://images.unsplash.com/photo-1581594549595-35f6edc7b762",
-"https://images.unsplash.com/photo-1576091160550-2173dba999ef"
-]
-},
-
-{
-title: "What Our Post-Surgical Care Includes",
-
-points: [
-"Wound dressing and surgical site monitoring",
-"Pain and medication management",
-"Vital signs monitoring",
-"Mobility and rehabilitation support",
-"Infection prevention and recovery guidance"
-]
-},
-
-{
-video:
-"https://cdn.coverr.co/videos/coverr-nurse-taking-care-of-patient-5997/1080p.mp4"
-},
-
-{
-paragraph:
-"With Venlakh’s dedicated post-operative support, patients receive hospital-grade care in the comfort of their home, ensuring safer recovery and peace of mind for families."
-}
-
-]
-},
-
-/* ------------------------------- */
-/* Advanced Wound Care */
-/* ------------------------------- */
-
-{
-slug: "advanced-wound-care",
-
-title: "Advanced Wound Care & VAC Therapy",
-
-subtitle:
-"Specialized wound care services including advanced dressings and VAC therapy to accelerate healing of complex wounds.",
-
-heroImage:
-"https://images.unsplash.com/photo-1579684385127-1ef15d508118",
-
-cardImage:
-"/services/2.png",
-
-sections: [
-
-{
-image:
-"https://images.unsplash.com/photo-1579684385127-1ef15d508118"
-},
-
-{
-paragraph:
-"Chronic wounds, surgical wounds, and diabetic ulcers require specialized treatment to heal properly. Advanced wound care techniques help reduce infection risks and promote faster tissue regeneration."
-},
-
-{
-title: "Advanced Treatment for Complex Wounds",
-
-paragraph:
-"Venlakh provides expert wound management including modern dressing techniques and Vacuum Assisted Closure (VAC) therapy. Our trained professionals ensure proper wound assessment, sterile care, and consistent monitoring for optimal healing."
-},
-
-{
-imageRow: [
-"https://images.unsplash.com/photo-1581594549595-35f6edc7b762",
-"https://images.unsplash.com/photo-1580281658629-2f4d8c1f2f0c"
-]
-},
-
-{
-title: "Advanced Wound Care Benefits",
-
-points: [
-"Professional wound assessment",
-"Infection control and sterile dressing",
-"VAC therapy for faster healing",
-"Management of diabetic and pressure ulcers",
-"Continuous monitoring of wound progress"
-]
-},
-
-{
-video:
-"https://cdn.coverr.co/videos/coverr-doctor-preparing-medical-equipment-6890/1080p.mp4"
-},
-
-{
-paragraph:
-"Our evidence-based wound care solutions help patients recover faster while minimizing complications and hospital readmissions."
-}
-
-]
-},
-
-/* ------------------------------- */
-/* Physiotherapy */
-/* ------------------------------- */
-
-{
-slug: "physiotherapy",
-
-title: "Physiotherapy",
-
-subtitle:
-"Personalized physiotherapy programs designed to restore mobility, strength, and functional independence.",
-
-heroImage:
-"https://images.unsplash.com/photo-1517836357463-d25dfeac3438",
-
-cardImage:
-"/services/3.png",
-
-sections: [
-
-{
-image:
-"https://images.unsplash.com/photo-1517836357463-d25dfeac3438"
-},
-
-{
-paragraph:
-"Physiotherapy helps restore movement, strength, and flexibility after injuries, surgeries, or neurological conditions. Structured therapy improves physical function and supports long-term recovery."
-},
-
-{
-title: "Targeted Rehabilitation Programs",
-
-paragraph:
-"Venlakh physiotherapists create personalized treatment plans focusing on pain relief, muscle strengthening, mobility restoration, and functional recovery to help patients return to their daily routines."
-},
-
-{
-imageRow: [
-"https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
-"https://images.unsplash.com/photo-1544367567-0f2fcb009e0b"
-]
-},
-
-{
-title: "Benefits of Physiotherapy",
-
-points: [
-"Pain reduction and muscle recovery",
-"Improved flexibility and joint mobility",
-"Strength and balance improvement",
-"Post-injury rehabilitation",
-"Better overall physical function"
-]
-},
-
-{
-video:
-"https://cdn.coverr.co/videos/coverr-athlete-training-in-gym-9216/1080p.mp4"
-},
-
-{
-paragraph:
-"Our expert physiotherapists focus on restoring mobility and improving quality of life through guided rehabilitation exercises and therapeutic techniques."
-}
-
-]
-},
-
-/* ------------------------------- */
-/* Stroke Rehabilitation */
-/* ------------------------------- */
-
-{
-slug: "stroke-neuropathy-rehabilitation",
-
-title: "Stroke & Neuropathy Rehabilitation",
-
-subtitle:
-"Comprehensive neurological rehabilitation programs supporting recovery after stroke and nerve disorders.",
-
-heroImage:
-"https://images.unsplash.com/photo-1584515933487-779824d29309",
-
-cardImage:
-"/services/4.png",
-
-sections: [
-
-{
-image:
-"https://images.unsplash.com/photo-1584515933487-779824d29309"
-},
-
-{
-paragraph:
-"Stroke and neuropathy can affect mobility, balance, coordination, and daily functioning. Early rehabilitation plays a vital role in restoring neurological function and improving independence."
-},
-
-{
-title: "Neurological Recovery Programs",
-
-paragraph:
-"Venlakh specialists design structured therapy programs combining physiotherapy, mobility training, and neurological rehabilitation techniques to help patients regain strength and coordination."
-},
-
-{
-imageRow: [
-"https://images.unsplash.com/photo-1581594549595-35f6edc7b762",
-"https://images.unsplash.com/photo-1584467735871-1d7c6a3e6c88"
-]
-},
-
-{
-title: "Rehabilitation Focus Areas",
-
-points: [
-"Muscle strength and coordination recovery",
-"Balance and mobility training",
-"Neurological function improvement",
-"Daily activity independence",
-"Long-term rehabilitation support"
-]
-},
-
-{
-video:
-"https://cdn.coverr.co/videos/coverr-woman-training-with-therapist-9184/1080p.mp4"
-},
-
-{
-paragraph:
-"Our neurological rehabilitation programs help patients rebuild confidence, mobility, and independence in their everyday lives."
-}
-
-]
-},
 
 /* ------------------------------- */
 /* Bedridden Support */
@@ -291,16 +16,16 @@ subtitle:
 "Compassionate home care services designed to support bedridden patients with daily medical and personal care.",
 
 heroImage:
-"https://images.unsplash.com/photo-1584515933487-779824d29309",
+"/services/BR2.png",
 
 cardImage:
-"/services/5.png",
+"/services/1.png",
 
 sections: [
 
 {
 image:
-"https://images.unsplash.com/photo-1584515933487-779824d29309"
+"/services/BR2.png"
 },
 
 {
@@ -317,8 +42,8 @@ paragraph:
 
 {
 imageRow: [
-"https://images.unsplash.com/photo-1581594549595-35f6edc7b762",
-"https://images.unsplash.com/photo-1576091160550-2173dba999ef"
+"/services/BR1.png",
+"/services/BR3.png"
 ]
 },
 
@@ -348,13 +73,431 @@ paragraph:
 },
 
 /* ------------------------------- */
+/* Cancer Recovery & Palliative Care */
+/* ------------------------------- */
+
+{
+slug: "cancer-recovery-palliative-care",
+
+title: "Cancer Recovery & Palliative Care",
+
+subtitle:
+"Specialized care focused on recovery, symptom relief, and compassionate support for cancer patients and their families.",
+
+heroImage:
+"/services/CP1.png",
+
+cardImage:
+"/services/2.png",
+
+sections: [
+
+{
+image:
+"/services/CP1.png"
+},
+
+{
+paragraph:
+"Cancer recovery and palliative care focuses on improving quality of life through pain management, emotional support, and medical supervision during and after cancer treatment."
+},
+
+{
+title: "Comprehensive Cancer Care Support",
+
+paragraph:
+"Venlakh provides dedicated care for cancer patients recovering from treatments such as chemotherapy, radiation, or surgery, while also offering palliative support to manage symptoms and maintain dignity and comfort."
+},
+
+{
+imageRow: [
+"/services/CP2.png",
+"/services/CP3.png"
+]
+},
+
+{
+title: "Support We Provide",
+
+points: [
+"Post-treatment recovery monitoring",
+"Pain and symptom management",
+"Nutritional and strength support",
+"Emotional and psychological care",
+"Family guidance and counseling"
+]
+},
+
+{
+video:
+"https://cdn.coverr.co/videos/coverr-nurse-supporting-patient-5998/1080p.mp4"
+},
+
+{
+paragraph:
+"Our compassionate caregivers work closely with patients and families to ensure comfort, dignity, and supportive care throughout the recovery or palliative journey."
+}
+
+]
+},
+
+
+/* ------------------------------- */
+/* Step Down Care */
+/* ------------------------------- */
+
+{
+slug: "step-down-care",
+
+title: "Step Down Care",
+
+subtitle:
+"Structured recovery care that bridges the gap between hospital treatment and returning home safely.",
+
+heroImage:
+"/services/SD1.png",
+
+cardImage:
+"/services/3.png",
+
+sections: [
+
+{
+image:
+"https://images.unsplash.com/photo-1584515933487-779824d29309"
+},
+
+{
+paragraph:
+"Step down care provides continued medical monitoring and rehabilitation for patients who no longer require intensive hospital treatment but still need professional care and supervision."
+},
+
+{
+title: "Guided Recovery Support",
+
+paragraph:
+"Venlakh offers specialized step down care designed to help patients regain strength, mobility, and independence through structured medical supervision and personalized recovery plans."
+},
+
+{
+imageRow: [
+"/services/SD2.png",
+"/services/SD3.png"
+]
+},
+
+{
+title: "Support We Provide",
+
+points: [
+"Post-hospital recovery monitoring",
+"Medication and treatment management",
+"Rehabilitation and mobility support",
+"Daily nursing and health supervision",
+"Gradual transition to independent living"
+]
+},
+
+{
+video:
+"https://cdn.coverr.co/videos/coverr-nurse-supporting-patient-5998/1080p.mp4"
+},
+
+{
+paragraph:
+"Our dedicated caregivers ensure patients recover safely and confidently, providing continuous support until they are ready to return home with stability and independence."
+}
+
+]
+},
+
+/* ------------------------------- */
+/* Advanced Wound Care */
+/* ------------------------------- */
+
+{
+slug: "advanced-wound-care",
+
+title: "Advanced Wound Care & VAC Therapy",
+
+subtitle:
+"Specialized wound care services including advanced dressings and VAC therapy to accelerate healing of complex wounds.",
+
+heroImage:
+"/services/AW1.png",
+
+cardImage:
+"/services/4.png",
+
+sections: [
+
+{
+image:
+"/services/AW1.png"
+},
+
+{
+paragraph:
+"Chronic wounds, surgical wounds, and diabetic ulcers require specialized treatment to heal properly. Advanced wound care techniques help reduce infection risks and promote faster tissue regeneration."
+},
+
+{
+title: "Advanced Treatment for Complex Wounds",
+
+paragraph:
+"Venlakh provides expert wound management including modern dressing techniques and Vacuum Assisted Closure (VAC) therapy. Our trained professionals ensure proper wound assessment, sterile care, and consistent monitoring for optimal healing."
+},
+
+{
+imageRow: [
+"/services/AW2.png",
+"/services/AW3.png"
+]
+},
+
+{
+title: "Advanced Wound Care Benefits",
+
+points: [
+"Professional wound assessment",
+"Infection control and sterile dressing",
+"VAC therapy for faster healing",
+"Management of diabetic and pressure ulcers",
+"Continuous monitoring of wound progress"
+]
+},
+
+{
+video:
+"https://cdn.coverr.co/videos/coverr-doctor-preparing-medical-equipment-6890/1080p.mp4"
+},
+
+{
+paragraph:
+"Our evidence-based wound care solutions help patients recover faster while minimizing complications and hospital readmissions."
+}
+
+]
+},
+
+/* ------------------------------- */
+/* Post Surgical Management */
+/* ------------------------------- */
+
+{
+slug: "post-surgical-management",
+
+title: "Post Surgical Management",
+
+subtitle:
+"Professional post-operative care designed to ensure safe recovery, pain management, and prevention of complications after surgery.",
+
+heroImage:
+"/services/PS1.png",
+
+cardImage:
+"/services/5.png",
+
+sections: [
+
+{
+image:
+"/services/PS1.png"
+},
+
+{
+paragraph:
+"Post-surgical care plays a critical role in helping patients recover safely after an operation. Proper monitoring, wound management, medication support, and mobility assistance are essential to prevent infections, reduce complications, and accelerate healing."
+},
+
+{
+title: "Safe Recovery & Expert Monitoring",
+
+paragraph:
+"At Venlakh, our trained medical professionals provide structured post-operative care at home, ensuring patients receive proper wound care, medication supervision, and vital monitoring. Our goal is to support a smooth recovery while reducing the need for frequent hospital visits."
+},
+
+{
+imageRow: [
+"/services/PS2.png",
+"/services/PS3.png"
+]
+},
+
+{
+title: "What Our Post-Surgical Care Includes",
+
+points: [
+"Wound dressing and surgical site monitoring",
+"Pain and medication management",
+"Vital signs monitoring",
+"Mobility and rehabilitation support",
+"Infection prevention and recovery guidance"
+]
+},
+
+{
+video:
+"https://cdn.coverr.co/videos/coverr-nurse-taking-care-of-patient-5997/1080p.mp4"
+},
+
+{
+paragraph:
+"With Venlakh’s dedicated post-operative support, patients receive hospital-grade care in the comfort of their home, ensuring safer recovery and peace of mind for families."
+}
+
+]
+},
+
+/* ------------------------------- */
+/* Stroke Rehabilitation */
+/* ------------------------------- */
+
+{
+slug: "stroke-neuropathy-rehabilitation",
+
+title: "Stroke & Neuropathy Rehabilitation",
+
+subtitle:
+"Comprehensive neurological rehabilitation programs supporting recovery after stroke and nerve disorders.",
+
+heroImage:
+"/services/SN1.png",
+
+cardImage:
+"/services/6.png",
+
+sections: [
+
+{
+image:
+"/services/SN1.png"
+},
+
+{
+paragraph:
+"Stroke and neuropathy can affect mobility, balance, coordination, and daily functioning. Early rehabilitation plays a vital role in restoring neurological function and improving independence."
+},
+
+{
+title: "Neurological Recovery Programs",
+
+paragraph:
+"Venlakh specialists design structured therapy programs combining physiotherapy, mobility training, and neurological rehabilitation techniques to help patients regain strength and coordination."
+},
+
+{
+imageRow: [
+"/services/SN2.png",
+"/services/SN3.png"
+]
+},
+
+{
+title: "Rehabilitation Focus Areas",
+
+points: [
+"Muscle strength and coordination recovery",
+"Balance and mobility training",
+"Neurological function improvement",
+"Daily activity independence",
+"Long-term rehabilitation support"
+]
+},
+
+{
+video:
+"https://cdn.coverr.co/videos/coverr-woman-training-with-therapist-9184/1080p.mp4"
+},
+
+{
+paragraph:
+"Our neurological rehabilitation programs help patients rebuild confidence, mobility, and independence in their everyday lives."
+}
+
+]
+},
+
+
+/* ------------------------------- */
+/* Physiotherapy */
+/* ------------------------------- */
+
+{
+slug: "physiotherapy",
+
+title: "Physiotherapy",
+
+subtitle:
+"Personalized physiotherapy programs designed to restore mobility, strength, and functional independence.",
+
+heroImage:
+"/services/PT1.png",
+
+cardImage:
+"/services/7.png",
+
+sections: [
+
+{
+image:
+"/services/PT1.png"
+},
+
+{
+paragraph:
+"Physiotherapy helps restore movement, strength, and flexibility after injuries, surgeries, or neurological conditions. Structured therapy improves physical function and supports long-term recovery."
+},
+
+{
+title: "Targeted Rehabilitation Programs",
+
+paragraph:
+"Venlakh physiotherapists create personalized treatment plans focusing on pain relief, muscle strengthening, mobility restoration, and functional recovery to help patients return to their daily routines."
+},
+
+{
+imageRow: [
+"/services/PT2.png",
+"/services/PT3.png"
+]
+},
+
+{
+title: "Benefits of Physiotherapy",
+
+points: [
+"Pain reduction and muscle recovery",
+"Improved flexibility and joint mobility",
+"Strength and balance improvement",
+"Post-injury rehabilitation",
+"Better overall physical function"
+]
+},
+
+{
+video:
+"https://cdn.coverr.co/videos/coverr-athlete-training-in-gym-9216/1080p.mp4"
+},
+
+{
+paragraph:
+"Our expert physiotherapists focus on restoring mobility and improving quality of life through guided rehabilitation exercises and therapeutic techniques."
+}
+
+]
+},
+
+
+
+/* ------------------------------- */
 /* IV Medication */
 /* ------------------------------- */
 
 {
 slug: "iv-medication-management",
 
-title: "IV Medication Management",
+title: "Home Care",
 
 subtitle:
 "Professional administration and monitoring of intravenous medications and therapies at home.",
@@ -363,7 +506,7 @@ heroImage:
 "https://images.unsplash.com/photo-1580281658629-2f4d8c1f2f0c",
 
 cardImage:
-"/services/6.png",
+"/services/8.png",
 
 sections: [
 
@@ -432,7 +575,7 @@ heroImage:
 "https://images.unsplash.com/photo-1584515933487-779824d29309",
 
 cardImage:
-"/services/7.png",
+"/services/9.png",
 
 sections: [
 
@@ -484,5 +627,8 @@ paragraph:
 
 ]
 }
+,
+
+
 
 ]

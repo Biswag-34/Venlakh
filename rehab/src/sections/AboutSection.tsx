@@ -115,24 +115,26 @@ export default function AboutSection() {
           <div className="max-w-[520px] space-y-6 lg:space-y-7">
 
             <div className="about-reveal text-[11px] lg:text-xs tracking-[0.35em] text-white/60 uppercase">
-              Premium Care
+              Venlakh Restro-Care Plus
             </div>
 
             <h2 className="about-reveal text-[34px] sm:text-[38px] lg:text-[46px] leading-[1.15] font-medium">
-              Enhancing care at our rehab
+              Advanced Rehabilitation & Recovery Care
             </h2>
 
             <p className="about-reveal text-white/70 text-[15px] lg:text-[16px] leading-[1.7]">
-              Our rehabilitation programs are designed to provide personalized
-              treatment plans that support long-term healing and recovery.
-              Patients receive care from a multidisciplinary team focused on
-              physical, emotional, and mental wellbeing.
+             Venlakh Restocare Plus provides specialized 
+             recovery and rehabilitation focused on elderly care.
+             We offer hospital-level medical support in a calm, 
+             private recovery environment, with 24×7 doctor monitoring,
+              dedicated nursing, and personalized care to ensure safety,
+               comfort, and dignity for every patient.
             </p>
 
             <p className="about-reveal text-white/70 text-[15px] lg:text-[16px] leading-[1.7]">
-              With advanced equipment and experienced professionals, we create
-              a supportive environment where patients can rebuild strength,
-              regain independence, and improve overall quality of life.
+             From post-surgical recovery and stroke rehabilitation to bedridden and geriatric care,
+              Venlakh bridges the gap between hospital and home, helping seniors
+               heal with confidence and peace of mind. 🏥💚
             </p>
 
             <div className="space-y-8 lg:space-y-10 pt-3 lg:pt-4">
@@ -140,22 +142,22 @@ export default function AboutSection() {
               <div className="about-reveal max-w-[420px]">
                 <ClipboardList className="w-[24px] h-[24px] lg:w-[26px] lg:h-[26px] text-[#9FB1A0] mb-3 lg:mb-4" />
                 <h4 className="text-[20px] lg:text-[22px] leading-[1.3] font-medium mb-2 lg:mb-3">
-                  Individual programs
+                  Our Vision 
                 </h4>
                 <p className="text-white/60 text-[15px] lg:text-[16px] leading-[1.7]">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque perspiciatis.
+                  Restoring Health, Rebuilding Independence, 
+                  and Reviving Quality of Life.
                 </p>
               </div>
 
               <div className="about-reveal max-w-[420px]">
                 <ClipboardList className="w-[24px] h-[24px] lg:w-[26px] lg:h-[26px] text-[#9FB1A0] mb-3 lg:mb-4" />
                 <h4 className="text-[20px] lg:text-[22px] leading-[1.3] font-medium mb-2 lg:mb-3">
-                  Expert staff and personnel
+                  Our Mission
                 </h4>
                 <p className="text-white/60 text-[15px] lg:text-[16px] leading-[1.7]">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque perspiciatis.
+                  To deliver high-quality rehabilitation, physiotherapy, and step-down care that promotes
+                   faster recovery and improved quality of life.
                 </p>
               </div>
 
@@ -165,8 +167,8 @@ export default function AboutSection() {
                   Certified medical equipment
                 </h4>
                 <p className="text-white/60 text-[15px] lg:text-[16px] leading-[1.7]">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque perspiciatis.
+                  Certified hospital-grade equipment ensuring safe,
+                  1:1 personalized accurate patient care. 🏥
                 </p>
               </div>
 

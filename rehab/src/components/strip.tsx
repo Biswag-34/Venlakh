@@ -11,32 +11,28 @@ import { motion } from "framer-motion";
 const features = [
   {
     icon: Stethoscope,
-    title: "Expert doctors",
-    subtitle: "Adipiscing elit",
+    title: "Clinical Precision",
   },
   {
     icon: Microscope,
-    title: "Medical equipment",
-    subtitle: "Adipiscing elit",
+    title: "Hospital Integrated Infra.",
   },
   {
     icon: ClipboardList,
-    title: "Individual plans",
-    subtitle: "Adipiscing elit",
+    title: "Advanced Monitoring",
   },
   {
     icon: Dumbbell,
-    title: "Training programs",
-    subtitle: "Adipiscing elit",
+    title: "Personalized Rehabilitation",
   },
 ];
 
 export default function FeatureStrip() {
   return (
-    <section className="w-full bg-[#8F9C88] py-14">
+    <section className="w-full bg-[#8F9C88] py-6">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
 
           {features.map((item, i) => {
             const Icon = item.icon;
@@ -48,27 +44,24 @@ export default function FeatureStrip() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.07 }}
-                className="flex items-start gap-5"
+                className={`
+                  flex items-center gap-4 py-3 px-6
+                  ${i !== features.length - 1 ? "lg:border-r lg:border-white/30" : ""}
+                  ${i < 2 ? "sm:border-b sm:border-white/30 lg:border-b-0" : ""}
+                `}
               >
                 {/* ICON */}
                 <Icon
-                  size={36}
-                  strokeWidth={1.4}
-                  className="text-white shrink-0 mt-1"
+                  size={32}
+                  strokeWidth={1.5}
+                  className="text-white shrink-0"
                 />
 
                 {/* TEXT */}
-                <div>
+                <h3 className="font-heading font-[400] text-white text-[18px] leading-tight tracking-[-0.01em]">
+                  {item.title}
+                </h3>
 
-                  <h3 className="font-heading font-[400] text-white text-[22px] leading-tight tracking-[-0.01em]">
-                    {item.title}
-                  </h3>
-
-                  <p className="font-body text-white/90 text-sm mt-1">
-                    {item.subtitle}
-                  </p>
-
-                </div>
               </motion.div>
             );
           })}

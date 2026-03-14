@@ -67,3 +67,7 @@ h6 {
   background: rgba(120, 120, 120, 0.3);
   border-radius: 10px;
 }
+
+html {
+  scroll-behavior: smooth;
+}

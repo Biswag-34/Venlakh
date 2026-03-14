@@ -29,8 +29,8 @@ const NAV_ITEMS = [
   {
     name: "Contact Us",
     children: [
-      { name: "Contact", href: "/contact" },
-      { name: "Appointment", href: "/appointment" },
+      { name: "Contact", href: "/contact#contact-info" },
+      { name: "Appointment", href: "/contact#appointment-form" },
     ],
   },
 ]
@@ -192,29 +192,32 @@ export default function Header() {
               <Phone size={18} strokeWidth={1.8} />
 
               <span className="font-heading tracking-[0.04em]">
-                1-800-458-5697
+                +91-861 825 9484
               </span>
 
             </div>
 
             {/* CTA BUTTON */}
-            <button
-              className="
-              rounded-full
-              bg-[#9FB1A0]
-              px-5 py-2
-              text-[14px]
-              font-heading
-              text-black
-              whitespace-nowrap
-              transition-all
-              hover:bg-[#8fa391]
-              md:px-6 md:py-2.5 md:text-[15px]
-              lg:px-7 lg:py-3 lg:text-[16px]
-            "
-            >
-              Let’s Talk
-            </button>
+           <Link href="/contact#appointment-form">
+  <button
+    className="
+      rounded-full
+      bg-[#9FB1A0]
+      px-5 py-2
+      text-[14px]
+      font-heading
+      text-black
+      whitespace-nowrap
+      transition-all
+      hover:bg-[#8fa391]
+      md:px-6 md:py-2.5 md:text-[15px]
+      lg:px-7 lg:py-3 lg:text-[16px]
+      cursor-grabbing
+    "
+  >
+    Enquiry
+  </button>
+</Link>
 
             {/* MOBILE MENU BUTTON */}
             <button

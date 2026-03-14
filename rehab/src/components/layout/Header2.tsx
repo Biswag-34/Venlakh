@@ -29,8 +29,8 @@ const NAV_ITEMS = [
   {
     name: "Contact Us",
     children: [
-      { name: "Contact", href: "/contact" },
-      { name: "Appointment", href: "/appointment" },
+      { name: "Contact", href: "/contact#contact-info" },
+      { name: "Appointment", href: "/contact#appointment-form" },
     ],
   },
 ]
@@ -190,7 +190,7 @@ export default function Header2() {
               <Phone size={20} strokeWidth={1.8} />
 
               <span className="font-[Canela-Bold] tracking-[0.03em]">
-                1-800-458-5697
+                +91-861 825 9484
               </span>
 
             </div>
@@ -210,7 +210,7 @@ export default function Header2() {
               hover:bg-[#8fa391]
             "
             >
-              Let’s Talk
+              Enquiry
             </button>
 
             {/* MOBILE MENU BUTTON */}

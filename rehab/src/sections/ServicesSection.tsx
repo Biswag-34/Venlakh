@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowDown, ArrowRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import gsap from "gsap";
 import { motion } from "framer-motion";
@@ -99,8 +99,8 @@ export default function ServicesSection() {
 
           <div className="flex items-end h-full">
             <button className="group flex items-center gap-4 text-white">
-              <span className="text-lg tracking-wide">Pricing</span>
-              <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+              <h2 className="text-lg tracking-wide">See More</h2>
+              <ArrowDown className="w-5 h-5 transition-transform duration-300 group-hover:translate-y-1" />
             </button>
           </div>
 
