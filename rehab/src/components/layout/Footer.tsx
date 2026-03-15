@@ -77,7 +77,7 @@ export default function Footer() {
                   href="#"
                   className="w-9 h-9 flex items-center justify-center rounded-full border border-white/20 transition-all duration-700 hover:bg-white hover:-translate-y-1"
                 >
-                  <Icon size={18} strokeWidth={1.6} className="text-black" />
+                  <Icon size={18} strokeWidth={1.6} className="text-white" />
                 </a>
               ))}
             </div>
@@ -97,7 +97,7 @@ export default function Footer() {
                 (item, i) => (
                   <li key={i}>
                     <Link
-                      href="#"
+                      href="/contact"
                       className="
                       relative inline-block text-sm text-gray-400
                       transition-all duration-700
@@ -191,7 +191,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-sm text-gray-500">
           <p>
-            © {new Date().getFullYear()} Rehabilitation Center. All Rights
+            © {new Date().getFullYear()} Venlakh Restocare Plus+ All Rights
             Reserved.
           </p>
 

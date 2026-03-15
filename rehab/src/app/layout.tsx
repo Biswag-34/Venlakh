@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
+import StickyCTA from "@/components/CTA/StickyCTA";
 
 const canela = localFont({
   src: [
@@ -38,6 +39,7 @@ export default function RootLayout({
     >
       <body className="font-body">
         <ThemeProvider>{children}</ThemeProvider>
+        <StickyCTA />
       </body>
     </html>
   );

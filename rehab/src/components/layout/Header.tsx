@@ -12,18 +12,15 @@ const NAV_ITEMS = [
     href: "/",
   },
   {
-    name: "Pages",
-    children: [
-      { name: "About", href: "/about" },
-      { name: "Services", href: "/services" },
-      { name: "Doctors", href: "/doctors" },
-    ],
+    name: "Gallery",
+    href: "/Coming-soon",
+    
   },
   {
     name: "Blog",
     children: [
-      { name: "Articles", href: "/blog" },
-      { name: "News", href: "/news" },
+      { name: "Articles", href: "/Coming-soon" },
+      { name: "News", href: "/Coming-soon" },
     ],
   },
   {
