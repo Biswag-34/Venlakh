@@ -8,6 +8,7 @@ import Revel from "@/sections/Reveal"
 import TestimonialsSection from "@/sections/Testimonials"
 import FeatureStrip from "@/components/strip"
 import Footer from "@/components/layout/Footer"
+import WhyChooseVenlakh from "@/sections/WhyChooseUs"
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Revel />
       <TestimonialsSection />
       <FeatureStrip />
+      <WhyChooseVenlakh />
       <Footer />
      
     </main>

@@ -116,43 +116,40 @@ export default function ServicesSection() {
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex gap-8 px-[max(5vw,40px)] cursor-none select-none">
 
-            {services.map((service, i) => {
+ {services.map((service, i) => {
+  const slideWidth =
+    "min-w-[90%] sm:min-w-[48%] lg:min-w-[32%]";
 
-              const slideWidth =
-                "min-w-[90%] sm:min-w-[48%] lg:min-w-[32%]";
+  return (
+    <Link
+      key={service.slug}
+      href={`/services/${service.slug}`}
+      className={`${slideWidth} block cursor-pointer`}
+    >
+      <motion.div
+        whileHover={{ scale: 1.02 }}
+        transition={{ duration: 0.3 }}
+        className="relative w-full aspect-[3/4] overflow-hidden rounded-xl bg-black group"
+      >
+        {/* Image */}
+        <Image
+          src={service.cardImage || `/services/${i + 1}.png`}
+          alt={service.title}
+          fill
+          sizes="(max-width: 640px) 90vw, (max-width: 1024px) 48vw, 32vw"
+          className="object-cover transition-all duration-500 group-hover:blur-sm"
+        />
 
-              return (
-                <Link
-                  key={service.slug}
-                  href={`/services/${service.slug}`}
-                  className={`${slideWidth} block cursor-pointer`}
-                >
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    transition={{ duration: 0.6 }}
-                    className="relative w-full aspect-[3/4] overflow-hidden rounded-xl bg-black"
-                  >
-
-                    <Image
-                      src={service.cardImage || `/services/${i + 1}.png`}
-                      alt={service.title}
-                      fill
-                      sizes="(max-width: 640px) 90vw, (max-width: 1024px) 48vw, 32vw"
-                      className="object-cover"
-                    />
-
-                    {/* Hover overlay */}
-                    <div className="absolute inset-0 bg-black/0 hover:bg-black/35 transition-all duration-700" />
-
-                    {/* Inner shadow */}
-                    <div className="absolute inset-0 shadow-[inset_0_0_120px_rgba(0,0,0,0.6)] opacity-0 hover:opacity-100 transition-opacity duration-700" />
-
-                  </motion.div>
-                </Link>
-              );
-
-            })}
-
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-60 transition-opacity duration-500 flex items-center justify-center">
+          <span className="text-white text-xl font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            Know More
+          </span>
+        </div>
+      </motion.div>
+    </Link>
+  );
+})}
           </div>
         </div>
       </div>
