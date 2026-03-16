@@ -420,6 +420,75 @@ paragraph:
 
 
 /* ------------------------------- */
+/* Ayurveda Panchakarma Therapies for Rejuvenation */
+/* ------------------------------- */
+
+{
+slug: "ayurveda-panchakarma-therapies-for-rejuvenation",
+
+title: "Ayurveda Panchakarma Therapies for Rejuvenation",
+
+subtitle:
+"Traditional Ayurvedic detox and rejuvenation therapies designed to restore balance, vitality, and long-term wellness.",
+
+heroImage:
+"/services/AY1.png",
+
+cardImage:
+"/services/7.png",
+
+sections: [
+
+{
+image:
+"/services/AY1.png"
+},
+
+{
+paragraph:
+"Panchakarma therapies focus on cleansing the body, removing accumulated toxins, and restoring natural balance through traditional Ayurvedic healing practices."
+},
+
+{
+title: "Holistic Detox & Rejuvenation",
+
+paragraph:
+"Venlakh provides guided Panchakarma therapies that support deep detoxification, improve circulation, and promote overall physical and mental well-being."
+},
+
+{
+imageRow: [
+"/services/AY2.png",
+"/services/AY3.png"
+]
+},
+
+{
+title: "Therapies We Provide",
+
+points: [
+"Traditional Panchakarma detox therapies",
+"Herbal oil massage and body treatments",
+"Herbal steam and cleansing therapies",
+"Stress relief and relaxation care",
+"Natural rejuvenation and vitality support"
+]
+},
+
+{
+video:
+"https://cdn.coverr.co/videos/coverr-nurse-supporting-patient-5998/1080p.mp4"
+},
+
+{
+paragraph:
+"Our trained therapists ensure every Panchakarma session promotes relaxation, detoxification, and long-lasting rejuvenation for the body and mind."
+}
+
+]
+},
+
+/* ------------------------------- */
 /* Physiotherapy */
 /* ------------------------------- */
 
@@ -435,7 +504,7 @@ heroImage:
 "/services/PT1.png",
 
 cardImage:
-"/services/7.png",
+"/services/8.png",
 
 sections: [
 
@@ -503,16 +572,16 @@ subtitle:
 "Professional administration and monitoring of intravenous medications and therapies at home.",
 
 heroImage:
-"https://images.unsplash.com/photo-1580281658629-2f4d8c1f2f0c",
+"/services/HC1.png",
 
 cardImage:
-"/services/8.png",
+"/services/9.png",
 
 sections: [
 
 {
 image:
-"https://images.unsplash.com/photo-1580281658629-2f4d8c1f2f0c"
+"/services/HC1.png"
 },
 
 {
@@ -529,8 +598,8 @@ paragraph:
 
 {
 imageRow: [
-"https://images.unsplash.com/photo-1576091160550-2173dba999ef",
-"https://images.unsplash.com/photo-1581594549595-35f6edc7b762"
+"/services/HC2.png",
+"/services/HC3.png"
 ]
 },
 
@@ -572,16 +641,16 @@ subtitle:
 "Compassionate palliative care focused on comfort, dignity, and emotional support for patients and families.",
 
 heroImage:
-"https://images.unsplash.com/photo-1584515933487-779824d29309",
+"/services/EL1.png",
 
 cardImage:
-"/services/9.png",
+"/services/10.png",
 
 sections: [
 
 {
 image:
-"https://images.unsplash.com/photo-1584515933487-779824d29309"
+"/services/EL1.png"
 },
 
 {
@@ -598,8 +667,8 @@ paragraph:
 
 {
 imageRow: [
-"https://images.unsplash.com/photo-1576091160550-2173dba999ef",
-"https://images.unsplash.com/photo-1581594549595-35f6edc7b762"
+"/services/EL2.png",
+"/services/EL3.png"
 ]
 },
 

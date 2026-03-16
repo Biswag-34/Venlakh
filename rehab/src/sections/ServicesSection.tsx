@@ -137,7 +137,7 @@ export default function ServicesSection() {
           alt={service.title}
           fill
           sizes="(max-width: 640px) 90vw, (max-width: 1024px) 48vw, 32vw"
-          className="object-cover transition-all duration-500 group-hover:blur-sm"
+          className="object-fit transition-all duration-500 group-hover:blur-sm"
         />
 
         {/* Overlay */}
