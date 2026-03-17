@@ -12,13 +12,13 @@ import {
 } from "lucide-react";
 
 const features = [
-  { icon: Stethoscope, title: "Hospital Care", desc: "Clinical monitoring and diagnostics outside a hospital setting." },
+  { icon: Stethoscope, title: "Hospital Integrated Care", desc: "Clinical monitoring & Emergency care & surgical care in a hospital setting." },
   { icon: HeartPulse, title: "24/7 Monitoring", desc: "Experienced doctors and clinical staff oversee patients round-the-clock." },
   { icon: UserCheck, title: "Dedicated Care", desc: "Personalized attention with tailored recovery plans." },
   { icon: BedDouble, title: "Private Suites", desc: "Comfortable, calm recovery rooms with full medical readiness." },
   { icon: Brain, title: "Rehabilitation", desc: "Post-surgical, stroke, bedridden, and geriatric support programs." },
   { icon: Syringe, title: "Clinical Support", desc: "IV therapy, infusion care, wound management, and continuous monitoring." },
-  { icon: HeartHandshake, title: "Compassionate Healing", desc: "Care delivered with empathy, dignity, and patient-first approach." },
+  { icon: HeartHandshake, title: "Ayurveda Panchakarma", desc: "Traditional healing through Ayurvedic detoxification and rejuvenation therapies." },
 ];
 
 const easeExpo = cubicBezier(0.19, 1, 0.22, 1);
