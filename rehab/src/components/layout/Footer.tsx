@@ -179,7 +179,7 @@ export default function Footer() {
 
               <div className="flex items-center gap-3">
                 <Mail size={17} strokeWidth={1.6} className="text-white" />
-                <p>info@thevenlakhhospital.com</p>
+                <p>Venlakhrestocareplus@gmail.com</p>
               </div>
             </div>
           </motion.div>

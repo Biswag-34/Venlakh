@@ -175,7 +175,7 @@ export default function ContactPage() {
               Send your queries or admission requests.
             </p>
 
-            <p className="text-lg font-medium">info@thevenlakhhospital.com</p>
+            <p className="text-lg font-medium">venlakhrestocareplus@gmail.com</p>
 
             <p className="text-sm text-neutral-500 mt-1">
               We usually respond within a few hours.
