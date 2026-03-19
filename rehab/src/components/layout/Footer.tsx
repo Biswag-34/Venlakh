@@ -62,7 +62,7 @@ export default function Footer() {
             transition={{ duration: 0.9, ease: "easeOut" }}
           >
             <h2 className="text-xl font-medium mb-4 tracking-wide">
-              Rehabilitation
+              Venlakh Restocare +
             </h2>
 
             <p className="text-sm text-gray-400 leading-relaxed max-w-xs mb-6">

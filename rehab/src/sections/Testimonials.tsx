@@ -10,24 +10,24 @@ import "swiper/css/pagination";
 
 const testimonials = [
   {
-    name: "Lily Miles",
-    role: "Patient",
-    text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+    name: "Shivakumar N",
+    role: "Patient's Son",
+    text: "We didn’t want to keep my mother in a hospital for long, but home care was not enough for her condition. This center gave us the perfect solution. Proper medical attention along with a calm and caring atmosphere. The staff is very attentive and treats patients with dignity.",
   },
   {
-    name: "James Graham",
-    role: "Patient",
-    text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+    name: "Anitha R",
+    role: "Patient's family member",
+    text: "For us, family comes first, so choosing the right place was very important. This center provided not just treatment but also emotional comfort. The staff speaks politely, listens patiently, and treats elders with respect. We are very satisfied.",
   },
   {
-    name: "Mary Stivens",
-    role: "Patient",
-    text: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+    name: "Srinivasa R Murthy",
+    role: "Patient's Brother",
+    text: "During a difficult time, what you need most is trust. The team here handled everything so professionally, yet with so much compassion. We never felt like our patient was neglected. It gave our entire family great peace of mind.",
   },
   {
-    name: "Henry Miles",
-    role: "Patient",
-    text: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.",
+    name: "Ashok K Chandra",
+    role: "Patient's family member",
+    text: "We were initially unsure, but after seeing the facility and meeting the staff, we felt confident. The setup is very good, and the care is consistent. It’s a good option for patients who need more than home care but don’t want a hospital stay.",
   },
 ];
 
