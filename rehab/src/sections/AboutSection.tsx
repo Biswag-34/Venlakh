@@ -71,43 +71,36 @@ export default function AboutSection() {
         {/* LEFT COLLAGE */}
 
         <div
-          ref={leftRef}
-          className="relative h-[520px] sm:h-[620px] lg:h-[720px] flex items-center"
-        >
-          <div className="grid grid-cols-2 grid-rows-2 gap-3 sm:gap-4 lg:gap-4 w-full h-full">
+  ref={leftRef}
+  className="relative flex items-center h-auto lg:h-[720px]"
+>
+  <div className="flex flex-col gap-3 sm:gap-4 w-full h-full">
 
-            <div className="relative overflow-hidden rounded-xl">
-              <Image
-                src="/about/1.png"
-                alt="therapy"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
-            </div>
+    {/* TOP IMAGE (NEW FULL WIDTH) */}
+    <div className="relative w-full aspect-[4/3] lg:flex-1 overflow-hidden rounded-xl">
+      <Image
+        src="/about/1.png"
+        alt="therapy"
+        fill
+        sizes="(max-width: 1024px) 100vw, 50vw"
+        className="object-cover"
+        priority
+      />
+    </div>
 
-            <div className="relative overflow-hidden rounded-xl">
-              <Image
-                src="/about/2.png"
-                alt="rehabilitation"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
-            </div>
+    {/* BOTTOM IMAGE */}
+    <div className="relative w-full aspect-[4/3] lg:flex-1 overflow-hidden rounded-xl">
+      <Image
+        src="/about/3.png"
+        alt="recovery"
+        fill
+        sizes="(max-width: 1024px) 100vw, 50vw"
+        className="object-cover"
+      />
+    </div>
 
-            <div className="relative overflow-hidden col-span-2 rounded-xl">
-              <Image
-                src="/about/3.png"
-                alt="recovery"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
-            </div>
-
-          </div>
-        </div>
+  </div>
+</div>
 
         {/* RIGHT CONTENT */}
 
