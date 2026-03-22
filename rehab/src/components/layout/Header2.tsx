@@ -18,7 +18,7 @@ const NAV_ITEMS = [
   {
     name: "Blog",
     children: [
-      { name: "Articles", href: "/Coming-soon" },
+      { name: "Articles", href: "/blog" },
       { name: "News", href: "/Coming-soon" },
     ],
   },
