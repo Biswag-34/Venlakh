@@ -15,7 +15,7 @@ const items = [
   {
     label: "WhatsApp",
     icon: FaWhatsapp,
-    href: "https://wa.me/918618259484",
+    href: "https://wa.me/919380391877",
     gradient: "from-green-500 to-green-600",
   },
 ]

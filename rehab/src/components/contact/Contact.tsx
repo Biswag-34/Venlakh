@@ -1,8 +1,8 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import { Phone, Mail, MapPin, Send } from "lucide-react"
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 
 const easeExpo: [number, number, number, number] = [0.19, 1, 0.22, 1]
 
@@ -13,44 +13,8 @@ export default function ContactPage() {
   const [message, setMessage] = useState("")
 
   const [status, setStatus] = useState<"idle" | "loading" | "sent">("idle")
-
   const [toast, setToast] = useState<string | null>(null)
-
-  // Button hover state (debounced)
   const [isHovered, setIsHovered] = useState(false)
-  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null) // ✅ Fixed: added null initial value
-
-  // Debounced hover handlers
-  const handleHoverStart = () => {
-    if (status !== "idle") return
-    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current)
-    setIsHovered(true)
-  }
-
-  const handleHoverEnd = () => {
-    if (status !== "idle") return
-    if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current)
-    hoverTimeoutRef.current = setTimeout(() => {
-      setIsHovered(false)
-    }, 200)
-  }
-
-  // Cleanup timeout on unmount
-  useEffect(() => {
-    return () => {
-      if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current)
-    }
-  }, [])
-
-  // Disable hover when not idle
-  useEffect(() => {
-    if (status !== "idle") {
-      // ✅ This setState is intentional and safe – disabling ESLint for this line
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setIsHovered(false)
-      if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current)
-    }
-  }, [status])
 
   useEffect(() => {
     if (!toast) return
@@ -91,19 +55,35 @@ export default function ContactPage() {
     return true
   }
 
+  function resetForm() {
+    setName("")
+    setPhone("")
+    setEmail("")
+    setMessage("")
+  }
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
 
+    if (status !== "idle") return
     if (!validate()) return
 
+    setIsHovered(false)
     setStatus("loading")
 
     await new Promise((r) => setTimeout(r, 2000))
 
     setStatus("sent")
-
     setToast("Consultation request sent successfully")
+
+    setTimeout(() => {
+      resetForm()
+      setStatus("idle")
+    }, 1100)
   }
+
+  const isCompact = isHovered && status === "idle"
+  const isBusy = status === "loading" || status === "sent"
 
   return (
     <main className="bg-[#0b0b0b] text-white">
@@ -117,15 +97,15 @@ export default function ContactPage() {
         >
           <div className="h-[2px] w-[90px] bg-white mb-8" />
 
-  <h1 className="text-4xl md:text-5xl font-heading leading-tight mb-6">
-  Contact{" "}
-  <span className="text-blue-200/90">
-    Venlakh Restocare
-  </span>{" "}
-  <span className="text-[#c9a86a]">
-    Plus+
-  </span>
-</h1>
+          <h1 className="text-4xl md:text-5xl font-heading leading-tight mb-6">
+            Contact{" "}
+            <span className="text-blue-200/90">
+              Venlakh Restocare
+            </span>{" "}
+            <span className="text-[#c9a86a]">
+              Plus+
+            </span>
+          </h1>
 
           <p className="text-neutral-300 text-lg leading-relaxed">
             Connect with our rehabilitation specialists to discuss patient care,
@@ -153,7 +133,7 @@ export default function ContactPage() {
               Speak directly with our care coordinators.
             </p>
 
-            <p className="text-lg font-medium">+91 8618259484</p>
+            <p className="text-lg font-medium">+91 9380391877</p>
 
             <p className="text-sm text-neutral-500 mt-1">
               Available for patient assistance.
@@ -211,22 +191,23 @@ export default function ContactPage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
+          className="max-w-3xl"
         >
           <h2 className="text-3xl font-heading mb-4">Start a Conversation</h2>
 
-          <p className="text-neutral-400 mb-12">
+          <p className="text-neutral-400 mb-8 md:mb-10 max-w-2xl leading-relaxed">
             Tell us about your requirement and our care team will reach out to
             guide you through the next steps.
           </p>
 
-          <form onSubmit={handleSubmit} className="grid gap-6">
-            <div className="grid md:grid-cols-2 gap-6">
+          <form onSubmit={handleSubmit} className="grid gap-5 md:gap-6">
+            <div className="grid md:grid-cols-2 gap-5 md:gap-6">
               <input
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 type="text"
                 placeholder="Full Name"
-                className="bg-white/5 border border-white/10 p-4 rounded-lg focus:outline-none focus:border-[#c9a86a]"
+                className="bg-white/5 border border-white/10 px-4 py-3.5 rounded-lg focus:outline-none focus:border-[#c9a86a] transition-colors"
               />
 
               <input
@@ -235,7 +216,7 @@ export default function ContactPage() {
                 type="tel"
                 maxLength={10}
                 placeholder="Phone Number"
-                className="bg-white/5 border border-white/10 p-4 rounded-lg focus:outline-none focus:border-[#c9a86a]"
+                className="bg-white/5 border border-white/10 px-4 py-3.5 rounded-lg focus:outline-none focus:border-[#c9a86a] transition-colors"
               />
             </div>
 
@@ -244,7 +225,7 @@ export default function ContactPage() {
               onChange={(e) => setEmail(e.target.value)}
               type="email"
               placeholder="Email Address"
-              className="bg-white/5 border border-white/10 p-4 rounded-lg focus:outline-none focus:border-[#c9a86a]"
+              className="bg-white/5 border border-white/10 px-4 py-3.5 rounded-lg focus:outline-none focus:border-[#c9a86a] transition-colors"
             />
 
             <textarea
@@ -252,71 +233,118 @@ export default function ContactPage() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Patient Condition / Requirement"
-              className="bg-white/5 border border-white/10 p-4 rounded-lg focus:outline-none focus:border-[#c9a86a]"
+              className="bg-white/5 border border-white/10 px-4 py-3.5 rounded-lg focus:outline-none focus:border-[#c9a86a] transition-colors resize-none"
             />
 
-            <motion.button
-              type="submit"
-              layout
-              initial="idle"
-              animate={isHovered ? "hover" : "idle"}
-              onHoverStart={handleHoverStart}
-              onHoverEnd={handleHoverEnd}
-              className="relative inline-flex items-center gap-2 bg-[#c9a86a] text-black font-medium px-6 py-4 rounded-lg hover:opacity-90 transition w-fit overflow-hidden"
+            <div className="pt-2">
+  <div
+    className="relative h-14 w-[252px]"
+    onMouseEnter={() => {
+      if (status === "idle") setIsHovered(true)
+    }}
+    onMouseLeave={() => {
+      if (status === "idle") setIsHovered(false)
+    }}
+  >
+    <motion.button
+      type="submit"
+      disabled={isBusy}
+      animate={{
+        width: isCompact ? 60 : 252,
+      }}
+      transition={{
+        duration: 0.38,
+        ease: easeExpo,
+      }}
+      className="absolute left-0 top-0 h-14 rounded-xl bg-[#c9a86a] text-black font-medium overflow-hidden shadow-[0_10px_30px_rgba(201,168,106,0.18)] disabled:cursor-not-allowed"
+    >
+      <div className="relative h-full w-full flex items-center justify-center">
+        <AnimatePresence mode="wait">
+          {status === "idle" && (
+            <motion.div
+              key="idle"
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.28, ease: easeExpo }}
+              className="flex items-center justify-center gap-2.5 whitespace-nowrap"
             >
-              {/* TEXT */}
               <motion.span
-                layout
-                variants={{
-                  idle: { opacity: 1, width: "auto" },
-                  hover: { opacity: 0, width: 0 },
+                animate={{
+                  opacity: isCompact ? 0 : 1,
+                  x: isCompact ? -10 : 0,
+                  width: isCompact ? 0 : "auto",
                 }}
-                transition={{ duration: 0.25 }}
-                className="whitespace-nowrap overflow-hidden"
+                transition={{ duration: 0.3, ease: easeExpo }}
+                className="overflow-hidden whitespace-nowrap"
               >
                 Request Consultation
               </motion.span>
 
-              {/* ICON */}
               <motion.div
-                layout
-                key={status}
-                animate={
-                  status === "sent"
-                    ? {
-                        x: [0, 10, 70],
-                        y: [0, -10, -70],
-                        rotate: [0, -10, 35],
-                        opacity: [1, 1, 0],
-                        transition: { duration: 0.9, ease: "easeOut" },
-                      }
-                    : {}
-                }
-                className="flex items-center"
+                animate={{
+                  scale: isCompact ? 1.02 : 1,
+                }}
+                transition={{ duration: 0.3, ease: easeExpo }}
+                className="flex items-center justify-center"
               >
-                <Send size={22} />
+                <Send size={20} />
               </motion.div>
+            </motion.div>
+          )}
 
-              {/* LOADING DOTS */}
-              {status === "loading" && (
-                <div className="flex gap-1 ml-2">
-                  {[0, 1, 2].map((i) => (
-                    <motion.div
-                      key={i}
-                      className="w-1.5 h-1.5 bg-black rounded-full"
-                      animate={{ y: [0, -4, 0] }}
-                      transition={{
-                        repeat: Infinity,
-                        duration: 0.6,
-                        delay: i * 0.15,
-                      }}
-                    />
-                  ))}
-                </div>
-              )}
-            </motion.button>
+          {status === "loading" && (
+            <motion.div
+              key="loading"
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.24 }}
+              className="flex items-center justify-center gap-2"
+            >
+              <Send size={20} />
+              <div className="flex items-center gap-1">
+                {[0, 1, 2].map((i) => (
+                  <motion.span
+                    key={i}
+                    className="block h-1.5 w-1.5 rounded-full bg-black"
+                    animate={{ y: [0, -4, 0], opacity: [0.5, 1, 0.5] }}
+                    transition={{
+                      duration: 0.7,
+                      repeat: Infinity,
+                      delay: i * 0.12,
+                      ease: "easeInOut",
+                    }}
+                  />
+                ))}
+              </div>
+            </motion.div>
+          )}
 
-            <p className="text-sm text-neutral-500">
+          {status === "sent" && (
+            <motion.div
+              key="sent"
+              initial={{ opacity: 1, x: 0, y: 0, rotate: 0, scale: 1 }}
+              animate={{
+                opacity: [1, 1, 0],
+                x: [0, 24, 88],
+                y: [0, -10, -52],
+                rotate: [0, -10, 28],
+                scale: [1, 1.04, 0.9],
+              }}
+              transition={{ duration: 0.9, ease: "easeOut" }}
+              className="flex items-center justify-center"
+            >
+              <Send size={20} />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </motion.button>
+  </div>
+</div>
+
+            <p className="text-sm text-neutral-500 pt-1">
               Your information is handled with strict confidentiality.
             </p>
           </form>

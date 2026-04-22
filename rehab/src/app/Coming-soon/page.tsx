@@ -76,7 +76,7 @@ export default function ComingSoonPage() {
           </Link>
 
           <a
-            href="https://wa.me/918618259484"
+            href="https://wa.me/919380391877"
             className="
             px-6 py-3
             rounded-lg
