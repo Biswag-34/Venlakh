@@ -246,7 +246,7 @@ export default function GlobalCTA() {
 
               <p>
               Email: info@thevenlakhhospital.com<br/>
-              Phone: +91 - 861 825 9484
+              Phone: +91 - 938 039 1877
               </p>
             </div>
 

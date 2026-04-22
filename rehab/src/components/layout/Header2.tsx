@@ -186,7 +186,7 @@ export default function Header2() {
               <Phone size={20} strokeWidth={1.8} />
 
               <span className="font-[Canela-Bold] tracking-[0.03em]">
-                +91-861 825 9484
+                +91-938 039 1877
               </span>
 
             </div>
