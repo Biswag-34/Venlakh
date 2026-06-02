@@ -5,7 +5,7 @@ const blog: Blog = {
   title:
     "Hospital-Grade Care at Home in Bangalore: A Complete Guide to Safe, Advanced Recovery",
   description:
-    "Discover how hospital-grade care at home in Bangalore is transforming recovery. From ICU setups to nursing care, learn why Venlakh is redefining home like healthcare.",
+    "Discover how hospital-grade care at home in Bangalore is transforming recovery. From ICU setups to nursing care, learn why Venlakh is redefining healthcare.",
 
   coverImage:
     "https://images.unsplash.com/photo-1584515933487-779824d29309",
