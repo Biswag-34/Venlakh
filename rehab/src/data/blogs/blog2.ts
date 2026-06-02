@@ -5,12 +5,12 @@ const blog: Blog = {
   title:
     "Hospital-Grade Care at Home in Bangalore: A Complete Guide to Safe, Advanced Recovery",
   description:
-    "Discover how hospital-grade care at home in Bangalore is transforming recovery. From ICU setups to nursing care, learn why Venlakh is redefining home healthcare.",
+    "Discover how hospital-grade care at home in Bangalore is transforming recovery. From ICU setups to nursing care, learn why Venlakh is redefining home like healthcare.",
 
   coverImage:
     "https://images.unsplash.com/photo-1584515933487-779824d29309",
 
-  tags: ["Home Healthcare", "ICU at Home", "Bangalore", "Recovery Care"],
+  tags: ["Home like Healthcare", "ICU at Home", "Bangalore", "Recovery Care"],
 
   layout: "layout1",
   createdAt: "2024-06-15",
@@ -25,7 +25,7 @@ const blog: Blog = {
     {
       type: "paragraph",
       content:
-        "Whether it’s post-surgical recovery, elderly care, chronic illness management, or critical care support, advanced home healthcare services now deliver the same level of clinical expertise — right at your doorstep.",
+        "Whether it’s post-surgical recovery, elderly care, chronic illness management, or critical care support, advanced home like healthcare services now deliver the same level of clinical expertise — right at your doorstep.",
     },
 
     {
@@ -40,7 +40,7 @@ const blog: Blog = {
     {
       type: "paragraph",
       content:
-        "Modern home healthcare providers in Bangalore now offer services such as vital monitoring, wound care, injections, physiotherapy, and chronic disease management, ensuring patients receive continuous, high-quality care without frequent hospital visits. :contentReference[oaicite:0]{index=0}",
+        "Modern home like healthcare providers in Bangalore now offer services such as vital monitoring, wound care, injections, physiotherapy, and chronic disease management, ensuring patients receive continuous, high-quality care without frequent hospital visits. :contentReference[oaicite:0]{index=0}",
     },
 
     {
@@ -51,12 +51,12 @@ const blog: Blog = {
 
     {
       type: "heading",
-      content: "Why More Families in Bangalore Are Choosing Home Healthcare",
+      content: "Why More Families in Bangalore Are Choosing Home like Healthcare",
     },
     {
       type: "paragraph",
       content:
-        "One of the biggest reasons for the shift toward home healthcare is comfort. Patients recover faster when they are surrounded by family in a familiar environment, reducing stress and improving emotional well-being.",
+        "One of the biggest reasons for the shift toward home like   healthcare is comfort. Patients recover faster when they are surrounded by family in a familiar environment, reducing stress and improving emotional well-being.",
     },
     {
       type: "paragraph",
@@ -77,7 +77,7 @@ const blog: Blog = {
     {
       type: "paragraph",
       content:
-        "Advanced home healthcare services in Bangalore are designed to replicate hospital-level care with precision and safety. These services typically include:",
+        "Advanced home like healthcare services in Bangalore are designed to replicate hospital-level care with precision and safety. These services typically include:",
     },
     {
       type: "paragraph",
@@ -103,7 +103,7 @@ const blog: Blog = {
     {
       type: "paragraph",
       content:
-        "One of the most significant advancements in home healthcare is ICU care at home. Patients who require critical monitoring — such as those recovering from major surgeries or neurological conditions — can now receive ICU-level support outside the hospital.",
+        "One of the most significant advancements in home like healthcare is ICU care at home. Patients who require critical monitoring — such as those recovering from major surgeries or neurological conditions — can now receive ICU-level support outside the hospital.",
     },
     {
       type: "paragraph",
@@ -113,7 +113,7 @@ const blog: Blog = {
 
     {
       type: "heading",
-      content: "Why Venlakh Stands Out in Home Healthcare",
+      content: "Why Venlakh Stands Out in Home like Healthcare",
     },
     {
       type: "paragraph",

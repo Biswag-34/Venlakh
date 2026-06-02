@@ -93,7 +93,7 @@ export default function ServicesSection() {
           </div>
 
           <div className="text-neutral-300 text-base leading-relaxed max-w-sm">
-            Professional home healthcare services designed to support recovery,
+            Professional home like healthcare services designed to support recovery,
             rehabilitation, and long-term patient care.
           </div>
 
